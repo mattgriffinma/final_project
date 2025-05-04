@@ -4,9 +4,11 @@ const mongoose = require('mongoose');
 const path = require('path');
 const connectDB = require('./config/dbConnect');
 const statesRoutes = require('./routes/states');
+const cors = require('cors');
 
 const app = express();
 const PORT = process.env.PORT || 3500;
+app.use(cors());
 
 // Connect to MongoDB
 connectDB();
